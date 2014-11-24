@@ -7,9 +7,13 @@
     <script src="js/controllers.js"></script>
 </head>
 <body ng-controller="AdminListCtrl">
-
+<div><h4>search</h4>
+any: <input ng-model="search.$">
+name: <input ng-model="search.name">
+    age: <input ng-model="search.age">
+</div>
 <ul>
-    <li ng-repeat="user in users">
+    <li ng-repeat="user in users | filter:search">
     name:{{user.name}} age:{{user.age}}
   </li>
 </ul>
