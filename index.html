@@ -1,13 +1,18 @@
 <!doctype html>
-<html lang="en" ng-app>
+<html lang="en" ng-app="adminApp">
 <head>
     <meta charset="utf-8">
     <title>My HTML File</title>
     <script src="bower_components/angular/angular.js"></script>
+    <script src="js/controllers.js"></script>
 </head>
-<body>
+<body ng-controller="AdminListCtrl">
 
-<p>Nothing here {{'yet' + '!'}}</p>
+<ul>
+    <li ng-repeat="user in users">
+    name:{{user.name}} age:{{user.age}}
+  </li>
+</ul>
 
 </body>
 </html>
