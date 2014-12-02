@@ -1,8 +1,23 @@
 'use strict';
 
-/* Controllers */
+var adminApp = angular.module('adminApp', ['ui.router']);
 
-var adminApp = angular.module('adminApp', []);
+adminApp.config(function($stateProvider, $urlRouterProvider) {
+    $urlRouterProvider.otherwise("/state1");
+    $stateProvider
+        .state('state1', {
+            url: "/state1",
+            controller: 'AdminListCtrl',
+            templateUrl: "js/partials/items-full-display.html"
+        })
+        .state('state2', {
+            url: "/state2",
+            controller:'AdminListCtrl',
+            templateUrl: "js/partials/items-part-display.html"
+        });
+});
+
+
 
 adminApp.controller('AdminListCtrl', function($scope) {
     $scope.users = [

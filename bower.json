@@ -2,6 +2,6 @@
   "name": "admin-users",
   "dependencies": {
     "angular": "1.3.x",
-    "angular-route": "1.3.x"
+    "angular-ui-router": "0.2.*"
   }
 }
