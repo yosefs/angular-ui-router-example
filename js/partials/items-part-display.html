@@ -1,4 +1,4 @@
 <h2>Part Display</h2>
 <ul>
-  <li ng-repeat="user in users">name:{{user.name}}</li>
+  <li ng-repeat="user in users | filter:search">name:{{user.name}}</li>
 </ul>
